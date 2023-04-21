@@ -1,0 +1,324 @@
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Nova Mono', monospace;
+}
+
+.titulo .logo{
+    position: absolute;
+    top: 40px;
+    left: 41px;
+    gap: 40px;
+}
+
+.escribiendo{
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left: 30%;
+    gap: 40px;
+    font-size: 30px;
+}
+
+
+h1 {
+    border-right: 2.5px solid black;
+    animation: cursor .8s infinite, escribiendo 3.5s steps(20, end);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes cursor {
+    0% {border-color: transparent;}
+    50%{ border-color: black;}
+}
+
+@keyframes escribiendo {
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+.ingreso {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 42%;
+    height: 60%;
+}
+
+.swal-modal{
+    background-color: rgb(78, 76, 76);
+}
+
+.swal-button{
+    background-color: rgb(78, 76, 76);
+    border-color: rgb(19, 19, 19) !important; 
+}
+
+.swal-button:active {
+    background-color: rgb(2, 2, 2) !important;
+}
+.swal-button:hover {
+    background-color: rgb(60, 60, 60) !important;
+}
+
+.ingreso label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ingreso textarea {
+    display: block;
+    background: transparent;
+    outline: none;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 5%;
+    top: 95%;
+
+}
+
+.encriptar {
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    padding: 2%;
+    gap: 8px;
+    color: white;
+    text-align: center;
+    background: rgb(70, 70, 70);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 8px rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.encriptar:active{
+    background: rgb(175, 175, 175);
+}
+
+.desencriptar{
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    padding: 2%;
+    gap: 8px;
+    margin-left: 10px;
+    color: black;
+    text-align: center;
+    background: rgb(175, 175, 175);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 8px rgb(34, 34, 34);
+    cursor: pointer;
+}
+
+.desencriptar:active{
+    background: rgb(70, 70, 70);
+}
+
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 92%;
+    left: 65%;
+    background: rgb(190, 190, 190);
+    position: absolute;
+    top: 5%;
+    border-radius: 32px;
+    box-shadow: 5px 5px 10px rgb(34, 34, 34);
+}
+
+
+.munieco {
+    position: absolute;
+    display: flex;
+    width: 80%;
+    height: 50%;
+    top: 12%;
+}
+
+
+.resultado .titulo-mensaje {
+    position: absolute;
+    width: 80%;
+    top: 65%;
+    display:inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    padding: 1%;
+    gap: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.resultado p{
+    position: absolute;
+    width: 80%;
+    top: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    text-align: center;
+}
+.resultado .mensajeEncriptado{
+    position: absolute;
+    width: 80%;
+    top: 15%;
+    display: none;
+    background: transparent;
+    outline: none;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.copiar{    
+    position: absolute;
+    left: 25%;
+    top: 80%;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 2%;
+    color: white;
+    text-align: center;
+    background: rgb(70, 70, 70);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 8px rgb(34, 34, 34);
+    cursor: pointer;
+    display: none;
+}
+
+.copiar:active{
+    background: rgb(175, 175, 175);
+}
+
+.limpiar{
+    position: absolute;
+    left: 25%;
+    top: 90%;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 2%;
+    color: white;
+    text-align: center;
+    background: rgb(70, 70, 70);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 8px rgb(34, 34, 34);
+    cursor: pointer;
+    display: none;
+}
+
+.limpiar:active{
+    background: rgb(175, 175, 175);
+}
+
+/* Diseño Responsivo*/
+
+@media (max-width: 57.5em) {
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .titulo .logo{
+        width: 20%;
+        top: 5px;
+        left: 5px;
+    }
+
+    .escribiendo{
+        width: 93%;
+        top: 50px;
+        left: 5%;
+    }
+
+    .ingreso {
+        width: 80%;
+        height: 60%;
+        left: 5%;
+        top: 15%;
+    }
+
+    .ingreso textarea{
+        width: 100%;
+    }
+
+    .botones{
+        width: 80%;
+        left: 5%;
+        top: 70%;
+    }
+
+    .encriptar, .desencriptar{
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .resultado{
+        width: 80%;
+        height: 33%;
+        left: 10%;
+        top: 65%;
+    }
+
+    .munieco{
+        display: none;
+        top: 0;
+    }
+
+    .resultado .titulo-mensaje{
+        top: 6%;
+    }
+
+    .resultado p{
+        top: 50%;
+    }
+
+    .resultado .mensajeEncriptado{
+        width: 60%;
+        top: 5%;
+    }
+
+    .copiar{
+        top: 70%;
+    }
+
+    .limpiar{
+        top: 85%;
+    }
+
+}
