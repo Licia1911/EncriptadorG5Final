@@ -29,7 +29,7 @@
         <main>
             <div class="ingreso">
                 <label for="mensaje">Ingrese su texto aquí:</label>
-                <textarea name="" id="mensaje" cols="50" rows="15" style="border: none;" autofocus pattern="[a-z ]*"
+                <textarea name="" id="mensaje" cols="50" rows="10" style="border: none;" autofocus pattern="[a-z ]*"
                     oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')" required></textarea>
                 <div class="botones">
                     <input type="button" value="Encriptar" class="encriptar" onclick="encriptar()">
@@ -46,6 +46,13 @@
                 <button class="limpiar" id="limpiar" onclick="limpiar()">Borrar Mensaje</button>
             </div>
         </main>
+        <footer>
+            <a href="https://www.linkedin.com/in/licia-carreras/" target="_blank"><img class="linkedin" src="./assets/link.jpg" alt="Icono linkedin"></a>
+
+            <a href="https://argproglgc.web.app/portfolio" target="_blank"><img class="logoLC" src="./assets/logo2.jpg" alt="Logo Personal"></a>
+
+            <a href="https://github.com/Licia1911" target="_blank"><img class="github" src="./assets/github_gris.jpg" alt="Icono github"></a>
+        </footer>
     </div>
     <script src="./index.js"></script>
 </body>
