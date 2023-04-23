@@ -31,6 +31,7 @@
                 <label for="mensaje">Ingrese su texto aquí:</label>
                 <textarea name="" id="mensaje" cols="50" rows="10" style="border: none;" autofocus pattern="[a-z ]*"
                     oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')" required></textarea>
+                <div class="alert"><img src="./assets/alertIcon.png" class="icon" alt="alert-icon"><p id="alert">letras minúsculas y sin acentos</p></div>
                 <div class="botones">
                     <input type="button" value="Encriptar" class="encriptar" onclick="encriptar()">
                     <input type="button" value="Desencriptar" class="desencriptar" onclick="desencriptar()">
